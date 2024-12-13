@@ -3,6 +3,9 @@ import helmet from "helmet";
 import healthRouter from "./routes/health";
 import cardRouter from "./routes/card";
 import dotenv from "dotenv";
+
+import swaggerUi from "swagger-ui-express";
+import swaggerSpec from "./config/swagger";
 import { errorHandler } from "./middlewares/errorHandler";
 import { NotFoundError } from "./utils/errors";
 import config from "./config";
@@ -10,7 +13,8 @@ import config from "./config";
 async function main() {
   dotenv.config();
   const app = express();
-  // app.use("/docs", swaggerUi.serve, swaggerUi.setup(openApiDoc));
+
+  app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
   app.use(helmet());
 
   app.use(express.json());

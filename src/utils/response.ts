@@ -1,4 +1,3 @@
-// utils/response.ts
 import { Response } from "express";
 
 interface ApiSuccess<T> {

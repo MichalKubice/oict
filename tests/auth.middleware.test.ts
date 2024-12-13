@@ -1,4 +1,3 @@
-// apiKeyAuthMiddleware.test.ts
 import { Request, Response, NextFunction } from "express";
 import { apiKeyAuthMiddleware } from "../src/middlewares/auth.middleware";
 import { UnauthorizedError } from "../src/utils/errors";
