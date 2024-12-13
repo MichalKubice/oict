@@ -28,3 +28,7 @@ npm install
 
 - `npm run dev`: Run the project in development mode.
 - `npm run test`: Run all jest tests.
+
+## Docs
+
+- `http://localhost:3000/api-docs/#/`
